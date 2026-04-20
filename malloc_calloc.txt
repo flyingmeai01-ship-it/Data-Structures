@@ -1,3 +1,4 @@
+Malloc and Calloc use cases and difference
 Syntax of malloc -->
 
 (void*)malloc(size_n * sizeof(n));
