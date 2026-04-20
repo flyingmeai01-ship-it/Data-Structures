@@ -1,0 +1,11 @@
+Syntax of malloc -->
+
+(void*)malloc(size_n * sizeof(n));
+
+where as calloc's syntax is -->
+
+(void*)calloc(size_n, sizeof(n));
+
+Difference b/w them 
+1) We can malloc only take one argument where as calloc's take 2
+2) By malloc function when memory allocated memory stores garbage value whereas calloc initialize with zeros.
