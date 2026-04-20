@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main(void) {
     int i, n;
     printf("Enter how many integers do you wanna store? ");
     scanf("%d", &n);
