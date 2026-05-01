@@ -9,7 +9,7 @@ struct node {
 struct node* add_at_beginning(struct node* head, int data) {
     struct node* ptr = malloc(sizeof(struct node));
     ptr -> data = data;
-    ptr -> link = head;
+    ptr -> link = NULL;
     head = ptr;
     return head;
 }
