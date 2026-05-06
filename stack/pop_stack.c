@@ -5,8 +5,21 @@
 int stack_arr[max];
 int top = -1;
 
+int isFull() {
+    if (top == max - 1) 
+        return 1;
+    else
+        return 0;
+}
+
+int isEmpty() {
+    if (top == -1)
+        return 1;
+    else
+        return 0;
+}
 void push(int data) {
-    if (top == max -1) {
+    if (isFull()) {
         printf("Stack overflow.\n");
         return;
     }
@@ -15,7 +28,7 @@ void push(int data) {
 }
 int pop() {
     int value;
-    if(top == -1) {
+    if(isEmpty()) {
         printf("Stack underflow.\n");
         exit(1);
     }
