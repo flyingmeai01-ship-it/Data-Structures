@@ -14,7 +14,7 @@ void print(char name[25], int age, char *class, float marks) {
 }
 
 int main(void) {
-    struct sa wee = {"Bhagyawan", 18, "BTech", 85.8};
+    struct sa wee = {"Bhagyawan", 18, "Bacholer of Science", 85.8};
     print(wee.name, wee.age, wee.class, wee.marks);
 
     return 0;
