@@ -1,41 +1,32 @@
-// Program to find unique element in an array.
-
 #include <iostream>
+#include <climits>
 
-int uniquie(int arr[], int s) {
-    int key;
-    bool fd;
-    for (int i = 0; i < s; i++) {
-        key = arr[i];
-        for (int j = 0; j < s; j++) {
-            if (i == j) {
-                continue;
-            }
-            else if (key == arr[j]){
-                fd = true;
-                break;
-            }
-            else {
-                fd = false;
-                break;
-            }
-        }
-        if (fd == 0) {
-            return key;
-        }
-    }
-    return -1;
-}
+// int main() {
+//     int n = 5;
+//     int arr[n] = {1, 2, 3, 4, 5};
+
+//     for (int st = 0; st < n; st++) {
+//         for (int end = st; end < n; end++) {
+//             for (int i = st; i <= end; i++) {
+//                 std::cout << arr[i];
+//             }
+//             std::cout << " ";
+//         }
+//         std::cout << std::endl;
+//     }
+//     return 0;
+// }
+
 int main() {
-    int test[] = {2, 3, 4, 2, 4, 5, 5};
-    int size = sizeof(test)/sizeof(test[0]);
+    int n = 7, maxSum = INT_MIN;
+    int arr[n] = {3, -4, 5, 4, -1, 7, -8};
+    for (int st = 0; st < n; st++) {
+        int curSum = 0;
+        for (int end = st; end < n; end++) {
+            curSum += arr[end];
+            maxSum = std::max(curSum, maxSum);
+        }
+    }
+    std::cout << "Maximum Subarray sum Value: " << maxSum << std::endl;
 
-    int uniq = uniquie(test, size);
-    if (uniq != -1) {
-        std::cout << "The uniquie element is: " << uniq << std::endl;
-    }
-    else {
-        std::cout << "No uniquie element in our array!" << std::endl;
-    }
-    return 0;
 }
