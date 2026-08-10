@@ -9,6 +9,13 @@ This Directory contains Implementations and Practice of Programs, related to Arr
 - Finding Min-Max using Array.
 
 ## Vector DS
+- vector mordern for loop
+    for (int value : array) {
+        statement 1
+        statement 2
+        statement 3
+    }
+
 ### Vector functions
 - size()
 - push_back()
