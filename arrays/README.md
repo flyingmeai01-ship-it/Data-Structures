@@ -1,15 +1,14 @@
 # Array Data Structure 
 
-This Directory contains Implementations and Practice of Programs, related to Array data structure.
+This directory contains implementations and practice of programs related to Array data structure.
 
 ## Contents
 
-- Linear Search implemetation.
-- Reverse array implemetation.
-- Finding Min-Max using Array.
+- Linear Search
+- Reverse array
+- Finding Minimum and Maximum Element
 
-## Vector DS
-## Vector Data Structure
+## C++ `std::vector`
 
 ### Modern `for` Loop
 
@@ -29,13 +28,16 @@ Here:
 - `array` → the vector being traversed.
 - The loop executes once for each element in the vector.
 
-### Vector functions
-- size()
-- push_back()
-- pop_back()
-- front()
-- back()
-- at()
+### Common `std::vector` Functions
+
+| Function | Purpose |
+|---|---|
+| `size()` | Returns the number of elements |
+| `push_back()` | Adds an element to the end |
+| `pop_back()` | Removes the last element |
+| `front()` | Accesses the first element |
+| `back()` | Accesses the last element |
+| `at()` | Accesses an element with bounds checking |
 
 
 ## Language Used
