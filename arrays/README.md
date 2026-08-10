@@ -9,12 +9,25 @@ This Directory contains Implementations and Practice of Programs, related to Arr
 - Finding Min-Max using Array.
 
 ## Vector DS
-- vector mordern for loop<br>
-    for (int value : array) {<br>
-        statement 1<br>
-        statement 2<br>
-        statement 3<br>
-    }
+## Vector Data Structure
+
+### Modern `for` Loop
+
+C++ provides a range-based `for` loop to iterate through all elements of a vector.
+
+```cpp
+for (int value : array) {
+    statement1;
+    statement2;
+    statement3;
+}
+```
+
+Here:
+
+- `int value` → stores the current element.
+- `array` → the vector being traversed.
+- The loop executes once for each element in the vector.
 
 ### Vector functions
 - size()
