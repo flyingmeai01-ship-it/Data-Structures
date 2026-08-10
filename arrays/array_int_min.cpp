@@ -2,13 +2,16 @@
 #include <iostream>
 #include <climits>
 
+// Function to find min or max integers.
 void find_min_max(int array[], int n) {
     int min_int = INT_MAX;
     int max_int = INT_MIN;
     for (int j = 0; j < n; ++j) {
+        // Using build in min or maax function to find min and max int.
         min_int = std::min(array[j], min_int);
         max_int = std::max(array[j], max_int);
     }
+    // printing output.
     std::cout << "Minimum int is: " << min_int << std::endl;
     std::cout << "Maximum int is: " << max_int << std::endl;
     return;
@@ -22,6 +25,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         std::cin >> array[i];
     }
+    // function call.
     find_min_max(array, n);
     return 0;
 }
