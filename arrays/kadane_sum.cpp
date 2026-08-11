@@ -12,8 +12,6 @@ int main() {
     // {1, 2, 3, 4}                 Output: 10
     // {-7}                         Output: -7
 
-    int size = sizeof(nums)/sizeof(nums[0]);
-
     for (int i : nums) {
         curSum += i;
         maxSum = std::max(curSum, maxSum);
