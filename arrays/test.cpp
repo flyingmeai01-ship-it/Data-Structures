@@ -1,32 +1,26 @@
 #include <iostream>
+#include <vector>
 #include <climits>
 
-// int main() {
-//     int n = 5;
-//     int arr[n] = {1, 2, 3, 4, 5};
+int maxSum_subarray(const std::vector<int>& arr) {
 
-//     for (int st = 0; st < n; st++) {
-//         for (int end = st; end < n; end++) {
-//             for (int i = st; i <= end; i++) {
-//                 std::cout << arr[i];
-//             }
-//             std::cout << " ";
-//         }
-//         std::cout << std::endl;
-//     }
-//     return 0;
-// }
+    int maxSum = INT_MIN, curSum = 0;
 
-int main() {
-    int n = 7, maxSum = INT_MIN;
-    int arr[n] = {3, -4, 5, 4, -1, 7, -8};
-    for (int st = 0; st < n; st++) {
-        int curSum = 0;
-        for (int end = st; end < n; end++) {
-            curSum += arr[end];
-            maxSum = std::max(curSum, maxSum);
+    for (int val: arr) {
+        curSum += val;
+        maxSum = std::max(curSum, maxSum);
+
+        if (curSum < 0) {
+            curSum = 0;
         }
     }
-    std::cout << "Maximum Subarray sum Value: " << maxSum << std::endl;
+    return maxSum;
+}
+int main() {
+    std::vector<int> subarray = {3, -4, 5, 4, -1, 7, -8};
 
+    int maxSum = maxSum_subarray(subarray);
+    
+    std::cout << "Maximum Subarray Sum: " << maxSum << std::endl;
+    return 0;
 }
