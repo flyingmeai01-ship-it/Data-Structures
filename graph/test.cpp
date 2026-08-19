@@ -38,26 +38,26 @@ public :
         }
         std::cout << std::endl;
     }
-    // void dfs_helper(int u, std::vector<bool> &vist) {
-    //     std::cout << u << " ";
-    //     vist[u] = true;
+    void dfs_helper(int u, std::vector<bool> &vist) {
+        std::cout << u << " ";
+        vist[u] = true;
 
-    //     for (int v : l[u]) {
-    //         if (!vist[v]) {
-    //             dfs_helper(v, vist);
-    //         }
-    //     }
-    // }
-    // void dfs() {
-    //     int src = 0;
-    //     std::vector<bool> vist(v, false);
+        for (int v : l[u]) {
+            if (!vist[v]) {
+                dfs_helper(v, vist);
+            }
+        }
+    }
+    void dfs() {
+        int src = 0;
+        std::vector<bool> vist(v, false);
 
-    //     dfs_helper(src, vist);
-    //     std::cout << std::endl;
-    // }
+        dfs_helper(src, vist);
+        std::cout << std::endl;
+    }
 };
 int main() {
-    Graph graph(4);
+    Graph graph(5);
     graph.add_Edge(0, 1);
     graph.add_Edge(1, 2);
     graph.add_Edge(1, 3);
@@ -66,7 +66,7 @@ int main() {
     std::cout << "bfs : ";
     graph.bfs();
 
-    // std::cout << "dfs : ";
-    // graph.dfs();
+    std::cout << "dfs : ";
+    graph.dfs();
     return 0;
 }
